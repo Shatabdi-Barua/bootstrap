@@ -21,7 +21,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item" id="about">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="product.html">Products</a>
@@ -37,10 +37,19 @@
                 </ul>
                 </li>
             </ul>
+            
+        
             </div>
             <!-- <div>
                 <button id="theme-toggle" onclick="changeTheme()">Toggle Theme</button>
             </div> -->
+            <div class="p-xl-2 p-lg-2 p-md-2 pt-2">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" class="border-3" onclick="changeTheme()" role="switch">
                 <!-- <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label> -->
@@ -48,12 +57,91 @@
         </div>
         
     </nav>
+    <!-- card  -->
     <div class="container">
-        <p class="h1 text-center">Welcome! </p>
+        <img src="images/cover.jpg" alt="Cover image" class="img-fluid mt-4 mb-2">
+        <p class="h1 text-center mt-2">Welcome! </p>
+        <!-- <div class="d-flex align-items-center justify-content-center"> -->
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-xl-0 mt-lg-0 mt-md-2 mt-sm-2 mt-2">
+                    <div class="card mx-5" style="width: 18rem;">
+                        <img src="images/placehold_image.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Product-1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">View Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-xl-0 mt-lg-0 mt-md-2 mt-sm-2 mt-2">
+                    <div class="card mx-5" style="width: 18rem;">
+                        <img src="images/placehold_image.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Product-2</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">View Detail</a>
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-xl-0 mt-lg-0 mt-md-2 mt-sm-2 mt-2">
+                    <div class="card mx-5" style="width: 18rem;">
+                        <img src="images/placehold_image.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Product-3</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">View Detail</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <!-- pagination -->
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="row mt-2">
+                    <div class="col-12 text-center">                        
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>                             -->
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            </ul>
+                        </nav>
+                    </div>                
+                </div>
+            </div>
+          
+            
+        <!-- </div> -->        
     </div>
-               
+    <!-- offcanvas  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTop">
+        <div class="offcanvas-header">
+            <p class="offcanvas-title" id="offcanvasTopLabel">
+                OFFCANVAS
+            </p>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            You can see sell chart by clicking this button            
+
+            <button class="btn btn-success" onclick="generateChart()">Generate Chart</button>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <div id="chart-footer" class="panel-footer">
+                <p class="h6"><em>Figure: A simple Line Chart showing this products sell flow</em></p>
+            </div>
+        </div>
+    </div>   
     
 </body>
     <script src="js/bootstrap.bundle.js"></script> 
     <script src="js/script.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </html>
