@@ -1,3 +1,16 @@
 .navbar-brand.logo{
     max-width: 10%;
 }
+/* table in center  */
+.centered-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+}
+.close{
+    cursor: pointer;
+}
+.alertStyle, .spinnerStyle{
+    display: none;
+}
